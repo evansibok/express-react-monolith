@@ -54,5 +54,5 @@
 
 ### Adding our React App using Create-React-App
 1. In the project root folder, run npx create-react-app client. If you want create-react-app to strictly use npm for installation you can add this flad --use-npm to the end of your npx command.
-2. In order to for heroku to recognize our app we need to teach it how to run our app. To do that, open your package.json and add this to scripts - `"heroku-postbuild": "cd client && npm i && npm run build"`.
-3. 
+2. In order for heroku to recognize our app we need to teach it how to run our app. To do that, open your package.json and add this to scripts - `"heroku-postbuild": "cd client && npm i && npm run build"`.
+3. Next, we want the app's main url to serve our react app and not our server. In the server's index.js file, just before the line where we start to use the dependencies, add this line app.use(express.static('client/build')). Note, however that this `'client/build'` represents the relative path to where your build static assets are in your react app.
