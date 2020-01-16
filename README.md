@@ -38,4 +38,10 @@
 12. Create a .env file in the same location as the package.json file. Open up your .env file and type this in PORT=8000. Be mindful of whitespaces.
 13. Go to line 1 in your index.js file and import your dotenv dependency like this - require('dotenv').config();
 14. Remember to restart your server whenever you make changes to any file. For automatic server restart, there is a nifty npm package called nodemon.
-15. 
+15. Congratulations! We have successfully built a server that is ready to be deployed to the cloud.
+
+### Deploying our Server to Heroku
+1. We will be deploying our server using Github & Heroku
+2. First create a new repository on your Github.com account
+3. Follow the instruction on the github page to push your existing local repository to the repository you just created on github.
+4. 
