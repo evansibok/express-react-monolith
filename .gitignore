@@ -1,0 +1,8 @@
+# Node Modules
+node_modules/
+
+# Environment File
+.env
+
+# VSCode System Files
+.vscode/
