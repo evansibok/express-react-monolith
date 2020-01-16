@@ -51,3 +51,8 @@
 8. Next you'll search for a repository to connect to heroku using the search box available below the deployment methods. Pick the repository for the node app you just created and click on the connect button next to it.
 9. Finally, pick the git branch where your project is and deploy it manually. For now you'll want to ignore automatic deployment unless you know what you're doing.
 10. Voila! Your server is live on heroku cloud.
+
+### Adding our React App using Create-React-App
+1. In the project root folder, run npx create-react-app client. If you want create-react-app to strictly use npm for installation you can add this flad --use-npm to the end of your npx command.
+2. In order to for heroku to recognize our app we need to teach it how to run our app. To do that, open your package.json and add this to scripts - `"heroku-postbuild": "cd client && npm i && npm run build"`.
+3. 
