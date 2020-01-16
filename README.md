@@ -44,4 +44,10 @@
 1. We will be deploying our server using Github & Heroku
 2. First create a new repository on your Github.com account
 3. Follow the instruction on the github page to push your existing local repository to the repository you just created on github.
-4. 
+4. Head over to Heroku.com and create an account if you don't have one.
+5. In your dashboard theres a button to the top right with label `New`. Click on it and select `Create New App`.
+6. Put in your App Name, choose a region and click Create App.
+7. Next we will be using the deployment method of Github. Click on Connect your Github account to connect your github to heroku.
+8. Next you'll search for a repository to connect to heroku using the search box available below the deployment methods. Pick the repository for the node app you just created and click on the connect button next to it.
+9. Finally, pick the git branch where your project is and deploy it manually. For now you'll want to ignore automatic deployment unless you know what you're doing.
+10. Voila! Your server is live on heroku cloud.
