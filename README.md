@@ -1,4 +1,4 @@
-# STEPS FOLLOWED TO BUILD THIS PROJECT
+# STEPS FOLLOWED TO SETUP THIS PROJECT
 
 ### CONFIGURATION
 
@@ -44,4 +44,19 @@
 1. We will be deploying our server using Github & Heroku
 2. First create a new repository on your Github.com account
 3. Follow the instruction on the github page to push your existing local repository to the repository you just created on github.
-4. 
+4. Head over to Heroku.com and create an account if you don't have one.
+5. In your dashboard theres a button to the top right with label `New`. Click on it and select `Create New App`.
+6. Put in your App Name, choose a region and click Create App.
+7. Next we will be using the deployment method of Github. Click on Connect your Github account to connect your github to heroku.
+8. Next you'll search for a repository to connect to heroku using the search box available below the deployment methods. Pick the repository for the node app you just created and click on the connect button next to it.
+9. Finally, pick the git branch where your project is and deploy it manually. For now you'll want to ignore automatic deployment unless you know what you're doing.
+10. Voila! Your server is live on heroku cloud.
+
+### Adding our React App using Create-React-App
+1. In the project root folder, run npx create-react-app client. If you want create-react-app to strictly use npm for installation you can add this flad --use-npm to the end of your npx command.
+2. In order for heroku to recognize our app we need to teach it how to run our app. To do that, open your package.json and add this to scripts - `"heroku-postbuild": "cd client && npm i && npm run build"`.
+3. Next, we want the app's main url to serve our react app and not our server. In the server's index.js file, just before the line where we start to use the dependencies, add this line app.use(express.static('client/build')). Note, however that this `'client/build'` represents the relative path to where your build static assets are in your react app and may have to vary with the location on your project.
+3. Make sure your changes are committed and pushed to your github repository.
+4. Go back to your heroku dashboard deploy section and manually deploy using the branch where updated project is.
+5. Click on view site on heroku, you should be seeing your default react app on the home URL. You can go ahead and add `/api/say-hi/?name=Evans` to your URL to test that your server still works.
+6. Congratulations! Your express-react-monolithic app is live on heroku and lives on `your-heroku-app-name.herokuapp.com`.
